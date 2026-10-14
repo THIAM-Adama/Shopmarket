@@ -1,59 +1,67 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🛒 Shopmarket — Solution E-Commerce Multi-Plateforme (API Backend & Application)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+> **Projet e-commerce complet comprenant une API RESTful Backend développée sous Laravel et une architecture prête pour une interface client mobile/web.**
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 📌 Présentation du Projet
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+**Shopmarket** est une application e-commerce conçue pour offrir une expérience d'achat fluide et une gestion simplifiée du catalogue de produits. Le projet illustre la séparation des responsabilités entre un backend robuste (gestion des données, authentification, transactions) et des interfaces clientes.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 🎯 Démarche Fonctionnelle & Conception
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+Le développement de Shopmarket a suivi les bonnes pratiques de gestion de projet informatique :
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+* **Analyse & Spécifications :** Définition du parcours utilisateur (parcours d'achat, panier, commande) et des règles de gestion e-commerce.
+* **Modélisation de la base de données (Merise / UML) :**
+  * **MCD / MLD :** Structuration des relations complexes (produits, catégories, commandes, utilisateurs, paniers).
+  * **UML :** Diagrammes de séquences pour les flux de commande et d'authentification.
+* **Conception d'API REST :** Normalisation des endpoints pour l'intégration d'applications tierces (Mobile / Web).
+* **Prototypage UX/UI :** Maquettage des écrans principaux sous Figma.
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🛠️ Architecture & Stack Technique
 
-### Premium Partners
+* **Backend / API :** PHP 8+, Laravel (API RESTful, Sanctum / JWT)
+* **Base de données :** MySQL / MariaDB (ORM Eloquent)
+* **Frontend / Mobile :** Flutter / Dart (ou Blade selon version)
+* **Conception & Outils :** Figma, Merise / UML, Postman, Git & GitHub
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+---
 
-## Contributing
+## ✨ Fonctionnalités Principales
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+* 🔐 **Authentification & Gestion des comptes :** Inscription, connexion sécurisée et gestion des profils clients.
+* 📦 **Gestion du Catalogue Produits :** Catégorisation, recherche, filtrage et fiches produits détaillées.
+* 🛒 **Gestion du Panier & Commandes :** Ajout/suppression d'articles, calcul des totals et suivi du statut des commandes.
+* 🔌 **API RESTful :** Endpoints documentés et sécurisés pour la communication entre le serveur et le client.
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 🚀 Installation & Lancement en local
 
-## Security Vulnerabilities
+### Prérequis
+* PHP >= 8.1
+* Composer
+* MySQL / XAMPP
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Étapes d'installation
 
-## License
+1. Cloner le projet : git clone https://github.com/THIAM-Adama/Shopmarket.git
+2. Installer les dépendances : composer install
+3. Configurer l'environnement : cp .env.example .env puis php artisan key:generate
+4. Mettre à jour les identifiants de la base de données dans le fichier .env
+5. Exécuter les migrations : php artisan migrate --seed
+6. Lancer le serveur : php artisan serve (Accès sur http://127.0.0.1:8000)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+## 📬 Contact
+
+**Adama THIAM** — *Assistant Chef de Projet IT & Business Analyst Junior*  
+* 🎓 Student @ ESGI Paris (Bachelor 3 MCSI)  
+* 💼 LinkedIn : [thiam10](https://linkedin.com/in/thiam10)  
+* 📧 Email : adathiam12zz@gmail.com
